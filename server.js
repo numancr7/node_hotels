@@ -51,8 +51,8 @@
 
 const express = require('express');
 const app = express();
-const port = 3000;
-
+const PORT = process.env.PORT || 3000;
+require('dotenv').config;
 // Ensure the database is connected before proceeding
 const db = require("./db");  // Importing after establishing the connection
 
@@ -74,6 +74,7 @@ app.use('/person', personroutes);
 const menuroutes = require('./routes/menuroutes');
 app.use('/menu', menuroutes);
 
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port 3000`);
 });

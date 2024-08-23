@@ -33,9 +33,9 @@
 
 
 const mongoose = require("mongoose");
+// const mongourl = process.env.MONGODB_URL;
+const mongourl = process.env.MONGODB_URL_LOCAL;
 
-const mongourl = 'mongodb+srv://nomi63558:Nouman2880@cluster0.98dlp.mongodb.net/yourDatabaseName';  // Specify the database name
-// const mongourl = "mongodb://localhost:27017/hotels"
 
 mongoose.connect(mongourl, {
   useNewUrlParser: true,
