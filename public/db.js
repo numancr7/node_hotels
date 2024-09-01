@@ -31,10 +31,11 @@
 
 
 
-
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
 const mongoose = require("mongoose");
-// const mongourl = process.env.MONGODB_URL;
-const mongourl = process.env.MONGODB_URL_LOCAL;
+const mongourl = process.env.MONGODB_URL;
+// const mongourl = process.env.MONGODB_URL_LOCAL;
 
 
 mongoose.connect(mongourl, {
@@ -45,7 +46,6 @@ mongoose.connect(mongourl, {
 }).catch(err => {
   console.error("Failed to connect to MongoDB", err);  // Clearer error message
 });
-
 const db = mongoose.connection;
 
 db.on('error', (err) => {

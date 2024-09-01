@@ -49,10 +49,10 @@
 // console.log("Hello")
 
 
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-require('dotenv').config;
 // Ensure the database is connected before proceeding
 const db = require("./db");  // Importing after establishing the connection
 
